@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlexChad Hub - Gaming & Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">AlexChad Hub</span>
+            </div>
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="home">Home</button>
+                <button class="tab-btn" data-tab="games">Games</button>
+                <button class="tab-btn" data-tab="tutorial">Tutorial</button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Tab -->
+        <div class="tab-content active" id="home">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to AlexChad Hub</h1>
+                    <p class="hero-subtitle">Your ultimate destination for gaming scripts, tutorials, and tools</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="switchTab('games')">Explore Games</button>
+                        <button class="btn btn-secondary" onclick="switchTab('tutorial')">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-text">Fast & Reliable</div>
+                    </div>
+                    <div class="floating-card delay-1">
+                        <div class="card-icon">🔒</div>
+                        <div class="card-text">Secure Scripts</div>
+                    </div>
+                    <div class="floating-card delay-2">
+                        <div class="card-icon">🎯</div>
+                        <div class="card-text">Easy to Use</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="container">
+                    <h2 class="section-title">Why Choose AlexChad Hub?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🚀</div>
+                            <h3>High Performance</h3>
+                            <p>Optimized scripts that run smoothly without lag or crashes</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h3>Safe & Secure</h3>
+                            <p>All scripts are tested and verified to be safe for use</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔄</div>
+                            <h3>Regular Updates</h3>
+                            <p>Constantly updated with new features and improvements</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💬</div>
+                            <h3>Community Support</h3>
+                            <p>Active community ready to help with any questions</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Games Tab -->
+        <div class="tab-content" id="games">
+            <section class="games-section">
+                <div class="container">
+                    <h2 class="section-title">Popular Games</h2>
+                    <div class="games-grid">
+                        <div class="game-card">
+                            <div class="game-image">🎮</div>
+                            <div class="game-info">
+                                <h3>Roblox Scripts</h3>
+                                <p>Premium scripts for popular Roblox games</p>
+                                <div class="game-stats">
+                                    <span class="stat">⭐ 4.9</span>
+                                    <span class="stat">👥 15K users</span>
+                                </div>
+                                <button class="btn btn-primary">Access Scripts</button>
+                            </div>
+                        </div>
+                        
+                        <div class="game-card">
+                            <div class="game-image">🏆</div>
+                            <div class="game-info">
+                                <h3>Universal Hub</h3>
+                                <p>Works across multiple gaming platforms</p>
+                                <div class="game-stats">
+                                    <span class="stat">⭐ 4.8</span>
+                                    <span class="stat">👥 8K users</span>
+                                </div>
+                                <button class="btn btn-primary">Get Started</button>
+                            </div>
+                        </div>
+                        
+                        <div class="game-card">
+                            <div class="game-image">⚔️</div>
+                            <div class="game-info">
+                                <h3>Combat Scripts</h3>
+                                <p>Advanced combat and PvP enhancements</p>
+                                <div class="game-stats">
+                                    <span class="stat">⭐ 4.7</span>
+                                    <span class="stat">👥 12K users</span>
+                                </div>
+                                <button class="btn btn-primary">Download</button>
+                            </div>
+                        </div>
+                        
+                        <div class="game-card">
+                            <div class="game-image">🎨</div>
+                            <div class="game-info">
+                                <h3>GUI Tools</h3>
+                                <p>Beautiful and functional user interfaces</p>
+                                <div class="game-stats">
+                                    <span class="stat">⭐ 4.9</span>
+                                    <span class="stat">👥 20K users</span>
+                                </div>
+                                <button class="btn btn-primary">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="script-executor">
+                <div class="container">
+                    <h2 class="section-title">Script Executor</h2>
+                    <div class="executor-card">
+                        <div class="executor-header">
+                            <span class="executor-title">AlexChad Executor</span>
+                            <button class="copy-btn" onclick="copyScript()">📋 Copy</button>
+                        </div>
+                        <textarea class="script-input" id="scriptInput" placeholder="loadstring(game:HttpGet('https://raw.githubusercontent.com/alexchad/hub/main/loader.lua'))()"></textarea>
+                        <div class="executor-footer">
+                            <button class="btn btn-success" onclick="executeScript()">▶️ Execute</button>
+                            <button class="btn btn-secondary" onclick="clearScript()">🗑️ Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tutorial Tab -->
+        <div class="tab-content" id="tutorial">
+            <section class="tutorial-section">
+                <div class="container">
+                    <h2 class="section-title">Getting Started</h2>
+                    
+                    <div class="tutorial-steps">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Download an Executor</h3>
+                                <p>First, you'll need a reliable script executor. We recommend using popular executors like Synapse X, Krnl, or Fluxus.</p>
+                                <div class="step-links">
+                                    <a href="#" class="link">Download Krnl</a>
+                                    <a href="#" class="link">Download Fluxus</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Install & Setup</h3>
+                                <p>Install your chosen executor and make sure to disable your antivirus temporarily, as most executors are flagged as false positives.</p>
+                                <div class="warning-box">
+                                    <span class="warning-icon">⚠️</span>
+                                    <span>Always download from official sources only!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Copy Our Script</h3>
+                                <p>Go to the Games tab, copy the loadstring for AlexChad Hub, and paste it into your executor.</p>
+                                <div class="code-block">
+                                    <code>loadstring(game:HttpGet('https://raw.githubusercontent.com/alexchad/hub/main/loader.lua'))()</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Execute & Enjoy</h3>
+                                <p>Join your favorite Roblox game, inject your executor, paste the script, and click execute. The AlexChad Hub GUI will appear!</p>
+                                <button class="btn btn-primary">Start Gaming</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-section">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <div class="faq-grid">
+                            <div class="faq-card">
+                                <h3>Is it safe to use?</h3>
+                                <p>Our scripts are regularly tested and updated. However, use at your own risk as with any third-party software.</p>
+                            </div>
+                            <div class="faq-card">
+                                <h3>Will I get banned?</h3>
+                                <p>While we implement anti-detection measures, there's always a risk when using exploits. Use alt accounts when possible.</p>
+                            </div>
+                            <div class="faq-card">
+                                <h3>How often are updates released?</h3>
+                                <p>We update our scripts regularly, usually within 24-48 hours after game updates that break functionality.</p>
+                            </div>
+                            <div class="faq-card">
+                                <h3>Can I request features?</h3>
+                                <p>Yes! Join our Discord community to suggest new features and report bugs. We value user feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AlexChad Hub</h3>
+                    <p>The ultimate gaming enhancement platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="switchTab('home')">Home</a></li>
+                        <li><a href="#" onclick="switchTab('games')">Games</a></li>
+                        <li><a href="#" onclick="switchTab('tutorial')">Tutorial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AlexChad Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
