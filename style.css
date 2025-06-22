@@ -653,3 +653,10 @@ body {
         justify-content: center;
     }
 }
+
+.game-image {
+    width: 100%;
+    height: 150px; /* or any preferred fixed height */
+    overflow: hidden;
+    border-radius: 20px;
+}
