@@ -176,3 +176,14 @@ document.addEventListener('DOMContentLoaded', () => {
         scriptInput.placeholder = "loadstring(game:HttpGet('https://raw.githubusercontent.com/alexchad/hub/main/loader.lua'))()";
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.game-card').forEach(card => {
+        const placeId = card.getAttribute('data-placeid');
+        if (placeId) {
+            const imgUrl = `https://thumbnails.roblox.com/v1/places/${placeId}/icons?size=512x512&format=Png`;
+            const gameImageDiv = card.querySelector('.game-image');
+            gameImageDiv.innerHTML = `<img src="${imgUrl}" alt="Game Thumbnail" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">`;
+        }
+    });
+});
